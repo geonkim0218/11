@@ -4,10 +4,13 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 void print_image(int a[5][5]) {
 	int i, j;
+	int *ptr;
 	
+	ptr = &a[0][0];
 	for (i=0;i<5;i++) {
 		for (j=0;j<5;j++) {
-			printf("%d ", a[i][j]);
+			printf("%d ", *ptr);
+			ptr++;
 		}
 		printf("\n");
 	}
